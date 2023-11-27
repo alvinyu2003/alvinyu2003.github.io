@@ -1,12 +1,3 @@
 # Site settings
 title: Alvin Yu Website
 description: Personal Website
-baseurl: "" # The subpath of your site, e.g., /blog. Leave blank for the root.
-
-# Build settings
-markdown: kramdown
-theme: minima # You can change the theme to your preferred theme.
-
-# GitHub Pages specific settings
-remote_theme: jekyll/minima # If you're using a GitHub-hosted theme
-url: "https://alvinyu2003.github.io" # Your GitHub Pages URL
