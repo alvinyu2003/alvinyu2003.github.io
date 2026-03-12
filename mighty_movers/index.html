@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mighty Movers - Construction Fun for Kids</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -34,6 +35,24 @@
         #showcase h2 {
             font-size: 1.5em;
             margin-bottom: 20px;
+        }
+        .model-viewer-wrap {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 10px;
+        }
+        model-viewer {
+            width: 100%;
+            max-width: 900px;
+            height: 420px;
+            background: #fff7cc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .model-status {
+            color: #9a5b00;
+            font-size: 0.95em;
+            margin: 8px 0 0;
         }
         #showcase img {
             max-width: 100%;
@@ -75,6 +94,11 @@
                 max-width: 45%;
             }
         }
+        @media(max-width: 480px) {
+            model-viewer {
+                height: 320px;
+            }
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -105,6 +129,19 @@
     <div class="container">
         <section id="showcase">
             <h2>Experience the Thrill of Operating Construction Vehicles!</h2>
+            <div class="model-viewer-wrap">
+                <model-viewer
+                    src="bulldozer.glb"
+                    alt="3D bulldozer model"
+                    camera-controls
+                    auto-rotate
+                    shadow-intensity="1"
+                    exposure="1.1"
+                    loading="lazy">
+                </model-viewer>
+            </div>
+            <p>Drag to rotate the bulldozer, scroll or pinch to zoom.</p>
+            <p id="model-status" class="model-status" aria-live="polite"></p>
         </section>
 
         <section id="features">
@@ -138,5 +175,28 @@
     <footer>
         <p>&copy; 2024 Alvin Yu. All rights reserved.</p>
     </footer>
+    <script>
+        const statusEl = document.getElementById("model-status");
+        const viewer = document.querySelector("model-viewer");
+        const errorMessage = "3D model failed to load. If you opened this page via file://, use a local server or GitHub Pages.";
+
+        if (statusEl && viewer) {
+            const scriptTimeout = setTimeout(() => {
+                if (!customElements.get("model-viewer")) {
+                    statusEl.textContent = "3D viewer script did not load. Check your network or ad blockers.";
+                }
+            }, 2000);
+
+            viewer.addEventListener("load", () => {
+                clearTimeout(scriptTimeout);
+                statusEl.textContent = "";
+            });
+
+            viewer.addEventListener("error", () => {
+                clearTimeout(scriptTimeout);
+                statusEl.textContent = errorMessage;
+            });
+        }
+    </script>
 </body>
 </html>
