@@ -1,108 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mighty Movers Support</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #fdd835;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #333;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding-top: 20px;
-        }
-        #support-form {
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            width: 60%;
-        }
-        #support-form h3 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        #support-form p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        #support-form label {
-            display: block;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        #support-form input[type="text"], #support-form input[type="email"], #support-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        #support-form input[type="submit"] {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #ff6f00;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact support for Mighty Movers. Get help, report issues, and share feedback.">
+  <title>Mighty Movers Support</title>
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-    <header>
-        <h1>Mighty Movers Support</h1>
-    </header>
-
-    <div class="container">
-        <section id="support-form">
-            <h3>Contact Support</h3>
-            <p>We'd love to hear from you! Whether you have a question, need assistance, or want to share your suggestions to make Mighty Movers even better, we're here to help.</p>
-            <p>You can also reach us directly at: <strong>support@alvinyu.com</strong></p>
-            <form action="mailto:support@alvinyu.com" method="post" enctype="text/plain">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <input type="submit" value="Send">
-            </form>
-        </section>
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/mighty_movers/">Mighty Movers</a>
+        <a href="/mighty_movers/support.html">Support</a>
+        <a href="/privacy_policy/mighty_movers.html">Privacy</a>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2024 Alvin Yu. All rights reserved.</p>
-    </footer>
+  <main class="container">
+    <section class="hero">
+      <h1>Mighty Movers Support</h1>
+      <p class="lead">Questions, bug reports, or suggestions are always welcome.</p>
+    </section>
+
+    <section class="panel" style="max-width: 700px; margin: 0 auto 18px;">
+      <h2 class="section-title">Contact</h2>
+      <p>Email us directly at <strong>support@alvinyu.com</strong>.</p>
+      <p>You can also use this quick form:</p>
+
+      <form action="mailto:support@alvinyu.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <input class="button" type="submit" value="Send">
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">&copy; 2026 Alvin Yu. All rights reserved.</div>
+  </footer>
 </body>
 </html>

@@ -1,202 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mighty Movers - Construction Fun for Kids</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #fdd835;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-            color: #333;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
-        #showcase {
-            margin-top: 30px;
-            text-align: center;
-        }
-        #showcase h2 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        .model-viewer-wrap {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0 10px;
-        }
-        model-viewer {
-            width: 100%;
-            max-width: 900px;
-            height: 420px;
-            background: #fff7cc;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        .model-status {
-            color: #9a5b00;
-            font-size: 0.95em;
-            margin: 8px 0 0;
-        }
-        #showcase img {
-            max-width: 100%;
-            height: auto;
-        }
-        #features {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .feature {
-            padding: 20px;
-            background: #fff;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        @media(min-width: 768px) {
-            #features {
-                flex-direction: row;
-                justify-content: space-around;
-            }
-        }
-        #screenshots {
-            margin: 20px 0;
-            text-align: center;
-        }
-        #screenshots img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        @media(min-width: 768px) {
-            #screenshots img {
-                max-width: 45%;
-            }
-        }
-        @media(max-width: 480px) {
-            model-viewer {
-                height: 320px;
-            }
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #ff6f00;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mighty Movers is a construction-themed kids app with interactive vehicles and educational fun.">
+  <title>Mighty Movers - Construction Fun for Kids</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-    <header>
-        <h1>Mighty Movers</h1>
-        <p>Construction Fun for Kids</p>
-    </header>
-
-    <div class="container">
-        <section id="showcase">
-            <h2>Experience the Thrill of Operating Construction Vehicles!</h2>
-            <div class="model-viewer-wrap">
-                <model-viewer
-                    src="bulldozer.glb"
-                    alt="3D bulldozer model"
-                    camera-controls
-                    auto-rotate
-                    shadow-intensity="1"
-                    exposure="1.1"
-                    loading="lazy">
-                </model-viewer>
-            </div>
-            <p>Drag to rotate the bulldozer, scroll or pinch to zoom.</p>
-            <p id="model-status" class="model-status" aria-live="polite"></p>
-        </section>
-
-        <section id="features">
-            <div class="feature">
-                <h3>Realistic Vehicles</h3>
-                <p>Operate a variety of construction vehicles including excavators, bulldozers, and cranes.</p>
-            </div>
-            <div class="feature">
-                <h3>Kid-Friendly Design</h3>
-                <p>Simple controls and colorful graphics make it perfect for young kids.</p>
-            </div>
-            <div class="feature">
-                <h3>Educational Fun</h3>
-                <p>Learn how each vehicle works in a fun and interactive environment.</p>
-            </div>
-        </section>
-
-        <section id="screenshots">
-            <h2>Screenshots</h2>
-            <img src="screenshot1.jpg" alt="Screenshot 1">
-            <img src="screenshot2.jpg" alt="Screenshot 2">
-        </section>
-
-        <div class="container">
-            <div style="text-align: center;">
-                <a href="https://apple.co/4fChyxj" class="btn">Download on the App Store</a>
-            </div>
-        </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/mighty_movers/">Mighty Movers</a>
+        <a href="/mighty_movers/support.html">Support</a>
+        <a href="/privacy_policy/mighty_movers.html">Privacy</a>
+      </nav>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2024 Alvin Yu. All rights reserved.</p>
-    </footer>
-    <script>
-        const statusEl = document.getElementById("model-status");
-        const viewer = document.querySelector("model-viewer");
-        const errorMessage = "3D model failed to load. If you opened this page via file://, use a local server or GitHub Pages.";
+  <main class="container">
+    <section class="hero">
+      <h1>Mighty Movers</h1>
+      <p class="lead">Construction fun for kids with hands-on vehicle exploration and playful learning.</p>
+    </section>
 
-        if (statusEl && viewer) {
-            const scriptTimeout = setTimeout(() => {
-                if (!customElements.get("model-viewer")) {
-                    statusEl.textContent = "3D viewer script did not load. Check your network or ad blockers.";
-                }
-            }, 2000);
+    <section>
+      <h2 class="section-title">Explore the Bulldozer in 3D</h2>
+      <div class="model-wrap">
+        <model-viewer
+          src="bulldozer.glb"
+          alt="3D bulldozer model"
+          camera-controls
+          auto-rotate
+          shadow-intensity="1"
+          exposure="1.1"
+          loading="lazy">
+        </model-viewer>
+      </div>
+      <p>Drag to rotate the bulldozer, scroll or pinch to zoom.</p>
+      <p id="model-status" class="status" aria-live="polite"></p>
+    </section>
 
-            viewer.addEventListener("load", () => {
-                clearTimeout(scriptTimeout);
-                statusEl.textContent = "";
-            });
+    <section>
+      <h2 class="section-title">Features</h2>
+      <div class="features">
+        <article class="card">
+          <h3>Realistic Vehicles</h3>
+          <p>Operate excavators, bulldozers, cranes, and more with intuitive controls.</p>
+        </article>
+        <article class="card">
+          <h3>Kid-Friendly Design</h3>
+          <p>Colorful visuals and simple interactions made for young players.</p>
+        </article>
+        <article class="card">
+          <h3>Educational Fun</h3>
+          <p>Discover how construction vehicles work through interactive play.</p>
+        </article>
+      </div>
+    </section>
 
-            viewer.addEventListener("error", () => {
-                clearTimeout(scriptTimeout);
-                statusEl.textContent = errorMessage;
-            });
+    <section>
+      <h2 class="section-title">Screenshots</h2>
+      <div class="screenshots">
+        <img src="screenshot1.jpg" alt="Mighty Movers gameplay screenshot 1" loading="lazy">
+        <img src="screenshot2.jpg" alt="Mighty Movers gameplay screenshot 2" loading="lazy">
+      </div>
+    </section>
+
+    <section style="text-align: center; margin: 28px 0 8px;">
+      <a href="https://apple.co/4fChyxj" class="button">Download on the App Store</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">&copy; 2026 Alvin Yu. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const statusEl = document.getElementById("model-status");
+    const viewer = document.querySelector("model-viewer");
+    const errorMessage = "3D model failed to load. If you opened this page via file://, use a local server or GitHub Pages.";
+
+    if (statusEl && viewer) {
+      const scriptTimeout = setTimeout(() => {
+        if (!customElements.get("model-viewer")) {
+          statusEl.textContent = "3D viewer script did not load. Check your network or ad blockers.";
         }
-    </script>
+      }, 2000);
+
+      viewer.addEventListener("load", () => {
+        clearTimeout(scriptTimeout);
+        statusEl.textContent = "";
+      });
+
+      viewer.addEventListener("error", () => {
+        clearTimeout(scriptTimeout);
+        statusEl.textContent = errorMessage;
+      });
+    }
+  </script>
 </body>
 </html>
